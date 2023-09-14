@@ -1,0 +1,179 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Montserrat;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* ----- hamburguer ---- */
+
+.menuHamburguer {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  padding-top: 20px;
+  width: 70%;
+  height: 100vh;
+  right: 0%;
+  transition: right 300ms ease-in-out;
+  background-color: white;
+}
+
+.menuHamburguer a {
+  text-decoration: none;
+  color: black;
+}
+
+.menuHamburguer button {
+  background-color: #e00a0a;
+  color: white;
+  border-radius: 19px;
+  width: 40px;
+  height: 38px;
+  cursor: pointer;
+  border: none;
+}
+.closed {
+  right: -100%;
+}
+#x {
+  aspect-ratio: 1/1;
+  width: 20px;
+  display: flex;
+  align-self: flex-end;
+  margin-right: 10px;
+  cursor: pointer;
+}
+#hamburguer {
+  width: 50px;
+  cursor: pointer;
+  aspect-ratio: 1/1;
+  display: none;
+  align-self: flex-end;
+  padding: 10px;
+}
+
+/* --------- Header ---------- */
+header {
+  color: white;
+  width: 100%;
+  height: 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  background-color: #cc0c1c;
+}
+nav {
+  margin-top: 10px;
+  padding-right: 50px;
+  padding-top: 10px;
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 20px;
+}
+nav a {
+  text-decoration: none;
+  cursor: pointer;
+  color: white;
+}
+
+nav a:hover {
+  opacity: 50%;
+  transition: 500ms;
+}
+
+.ARROZ {
+  font-size: 30px;
+}
+
+nav button {
+  background-color: white;
+  border-radius: 19px;
+  width: 160px;
+  height: 38px;
+  cursor: pointer;
+  border: none;
+}
+
+nav button:hover {
+  opacity: 70%;
+  transition: 500ms;
+}
+
+
+
+/* ----- footer ----- */
+
+footer {
+  background: #d9d9d9;
+  width: 100%;
+  height: auto;
+  align-items: center;
+}
+
+.logosFooter {
+  display: inline-flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  gap: 10px;
+}
+
+.mackenzie {
+  padding-right: 20px;
+  padding-top: 15px;
+}
+.mackleaps{
+  padding-left: 20px;
+}
+.mackenzie img{
+  width: 100px;
+  height: 80px;
+}
+.mackleaps img{
+  width: 190px;
+  height: 100px;
+}
+
+@media (max-width: 800px) {
+  /* ---------- Header ---------- */
+  nav {
+    display: none;
+  }
+  #hamburguer {
+    display: flex;
+  }
+
+  .menuHamburguerOpen {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background-color: white;
+    right: 0%;
+    overflow-y: hidden;
+    transition: 300ms;
+  }
+  nav a {
+    text-decoration: none;
+    color: white;
+    font-size: 24px;
+    margin: 20px;
+  }
+}

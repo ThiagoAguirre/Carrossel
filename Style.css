@@ -1,0 +1,264 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Montserrat;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* ----- hamburguer ---- */
+
+.menuHamburguer {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  padding-top: 20px;
+  width: 70%;
+  height: 100vh;
+  right: 0%;
+  transition: right 300ms ease-in-out;
+  background-color: white;
+}
+
+.menuHamburguer a {
+  text-decoration: none;
+  color: black;
+}
+
+.menuHamburguer button {
+  background-color: #e00a0a;
+  color: white;
+  border-radius: 19px;
+  width: 40px;
+  height: 38px;
+  cursor: pointer;
+  border: none;
+}
+.closed {
+  right: -100%;
+}
+#x {
+  aspect-ratio: 1/1;
+  width: 20px;
+  display: flex;
+  align-self: flex-end;
+  margin-right: 10px;
+  cursor: pointer;
+}
+#hamburguer {
+  width: 50px;
+  cursor: pointer;
+  aspect-ratio: 1/1;
+  display: none;
+  align-self: flex-end;
+  padding: 10px;
+}
+
+/* --------- Header ---------- */
+header {
+  color: white;
+  width: 100%;
+  height: 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  background-color: #cc0c1c;
+}
+nav {
+  margin-top: 10px;
+  padding-right: 50px;
+  padding-top: 10px;
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 20px;
+}
+nav a {
+  text-decoration: none;
+  cursor: pointer;
+  color: white;
+}
+
+nav a:hover {
+  opacity: 50%;
+  transition: 500ms;
+}
+
+.ARROZ {
+  font-size: 30px;
+}
+
+nav button {
+  background-color: white;
+  border-radius: 19px;
+  width: 160px;
+  height: 38px;
+  cursor: pointer;
+  border: none;
+}
+
+nav button:hover {
+  opacity: 70%;
+  transition: 500ms;
+}
+.page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  width: 100%;
+  height: auto;
+  background-color: #ffffff;
+}
+
+.formLogin {
+  display: flex;
+  flex-direction: column;
+  background-color: #d9d9d9;
+  border-radius: 7px;
+  padding: 40px;
+  box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.4);
+  gap: 5px;
+}
+
+.areaLogin img {
+  width: 420px;
+}
+
+.formLogin input {
+  padding: 15px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  margin-bottom: 20px;
+  margin-top: 5px;
+  border-radius: 4px;
+  transition: all linear 160ms;
+  outline: none;
+  border: 2px solid #f72525;
+}
+
+.imagem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+}
+.imagem img {
+  width: 100px;
+  height: 100px;
+}
+
+.formLogin input:focus {
+  border: 1px solid #f72525;
+}
+
+.formLogin label {
+  color: black;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.formLogin a {
+  display: inline-block;
+  margin-bottom: 20px;
+  font-size: 13px;
+  color: #555;
+  transition: all linear 160ms;
+}
+
+.formLogin a:hover {
+  color: #f72585;
+}
+
+.btn {
+  background-color: #cc0c1c;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+  border: none !important;
+  transition: all linear 160ms;
+  cursor: pointer;
+  margin: 0 !important;
+}
+
+.btn:hover {
+  transform: scale(1.05);
+  background-color: #d31212;
+}
+/* ----- footer ----- */
+
+footer {
+  background: #d9d9d9;
+  width: 100%;
+  height: auto;
+  align-items: center;
+}
+
+.logosFooter {
+  display: inline-flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  gap: 10px;
+}
+
+.mackenzie {
+  padding-right: 20px;
+  padding-top: 15px;
+}
+.mackleaps{
+  padding-left: 20px;
+}
+.mackenzie img{
+  width: 100px;
+  height: 80px;
+}
+.mackleaps img{
+  width: 190px;
+  height: 100px;
+}
+
+@media (max-width: 800px) {
+  /* ---------- Header ---------- */
+  nav {
+    display: none;
+  }
+  #hamburguer {
+    display: flex;
+  }
+
+  .menuHamburguerOpen {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background-color: white;
+    right: 0%;
+    overflow-y: hidden;
+    transition: 300ms;
+  }
+  nav a {
+    text-decoration: none;
+    color: white;
+    font-size: 24px;
+    margin: 20px;
+  }
+}
