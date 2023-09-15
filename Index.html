@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="Style.css" />
+    <link rel="stylesheet" href="index.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap"
       rel="stylesheet"
@@ -12,7 +12,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500&display=swap"
       rel="stylesheet"/>
     <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
-    <script src="index.js" defer></script>
+
     <title>Login</title>
   </head>
   <body>
@@ -35,20 +35,35 @@
     
     <div class="page">
         <form method="POST" class="formLogin">
-            <div class="imagem"><img src="img/mackenzie.png" alt="LOGO mackenzie"></div>
-            <label for="email">DRT</label>
-            <input type="email" placeholder="Login" autofocus="true" />
-            <label for="password">Senha</label>
-            <input type="password" placeholder="Senha" />
-            <a href="/">Esqueci minha senha</a>
-            <input type="submit" value="Acessar" class="btn" />
+            <div class="imagem">
+              <img src="img/mackenzie.png" alt="LOGO mackenzie">
+            </div>
+
+            <div>  
+              <div><label>DRT</label></div>
+              <input type="email" name="email" id="email" placeholder="seu@email.com" onchange="onChangeEmail()"/>
+              <div class="error" id="email-required-error">Email obrigatorio</div>
+              <div  class="error" id="email-invalid-error">Email invalido</div>
+            </div>
+
+            <div>
+              <div><label>Senha</label></div>
+              <input type="password" name="password" id="password" placeholder="Senha" onchange="onChangePassword()"/>
+              <div class="error" id="password-required-error">Senha obrigatória</div>
+            </div>
+
+            <div>
+              <button type="button" class="clear" id="recover-password-button" disabled="true">Esqueceu a senha ?</button>
+            </div>
+            
+            <div>
+              <button  type="button" class="solid btn" id="login-button" disabled="true" >Entrar</button>
+            </div>
         </form>
     </div>
 
     <footer>
-
       <div class="logosFooter">
-        
           <div class="mackleaps">
             <img src="img/mack-logo.png" />
           </div>
@@ -56,8 +71,9 @@
             <img src="/img/mack-leaps.png" />
           </div>
         </div>
-      
-      
     </footer>
   </body>
+  <script src="index.js"></script>
+  <script src="validaton.js"></script>
+  <script src="style.js" defer></script>
 </html>
